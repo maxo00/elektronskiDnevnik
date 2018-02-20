@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sajt skole</title>
+	<link href="../static/index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+	<div class="deljenje levaStrana">
+	  <div class="sredinaDela">
+	    
+	    <form action="/prikazUcenika" method="post">
+	    	<h2>Ucenici</h2>
+	    	<input type="text" name="sifraUcenika" placeholder="Sifra ucenika"><br><br>
+	    	<input type="text" name="odeljenje" placeholder="Broj odeljenja: 11, 36, 55..."><br><br>
+	    	<button type="submit">Potvrdi</button>
+	    </form>
+	  </div>
+	</div>
+
+	<div class="deljenje desnaStrana">
+	  <div class="sredinaDela">
+	   
+	    <form action="/dalDaRedirect" method="post">
+	    	 <h2>Profesori</h2>
+	    	<input type="text" name="sifra" placeholder="Skolska sifra"><br><br>
+	    	<button type="submit">Potvrdi</button>
+
+	    </form>
+	  </div>
+	</div>
+
+</body>
+</html>

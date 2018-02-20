@@ -1,0 +1,81 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.stranica {
+  width: 100%;
+  height: 100vh;
+
+  margin-top: -20px;
+}
+
+.stranaZaPredmete {
+    width: 40%;
+    height: 100%;
+    float: left;
+    background-color: #f2f2f2;
+    overflow-y: auto;
+}
+
+.upisaneOcene {
+    width: 30%;
+    height: 100%;
+    float: left;
+    background: linear-gradient(to right, #f2f2f2, #d9d9d9);
+    overflow-y: auto;
+}
+
+.napomeneIzostanci {
+  width: 30%;
+  height: 100%;
+  position: relative;
+  float: right;
+  background: linear-gradient(to right, #d9d9d9, #bfbfbf);
+  background-color: #f2f2f2;
+}
+
+.vrh {
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(#f2f2f2, #bfbfbf);
+}
+#glavniNaslov{
+    text-align: center;
+    margin: auto;
+    padding-top: 40px;
+
+     color: #333333;
+    font-size: 40px;
+    font-family: 'Slabo 27px', serif;
+    font-style: italic;
+}
+h2{
+    text-align: center;
+    margin-top: 5%;
+}
+p{
+
+    font-size: 20px;
+    padding-left: 20px;
+
+}
+
+.deliGore{
+     width: 80%;
+    height: 30%;
+    overflow-y: auto;
+    margin: auto; 
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.deliDole{
+    width: 80%;
+    height: 30%;
+    overflow-y: auto;
+    margin: auto; 
+    margin-top: 10%;
+    margin-bottom: 10%;
+}

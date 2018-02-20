@@ -1,0 +1,351 @@
+index:
+
+Prijava ucenika:
+
+<form action="/ucenik" method="post" autocomplete="off">
+	    	<h2>Ucenici</h2>
+	    	<input type="text" name="sifraUcenika" placeholder="Sifra ucenika" minlength="7" maxlength="7"><br><br>
+	    	<input type="text" name="odeljenje" placeholder="Broj odeljenja: 11, 36, 55..."  minlength="2" maxlength="2"><br><br>
+	    	<button type="submit">Potvrdi</button>
+	    </form>
+-------
+
+Prijava profesora:
+
+<form action="/profesorProvera" method="post" autocomplete="off">
+	    	 <h2>Profesori</h2>
+	    	<input type="password" name="sifraProfesora" placeholder="Sifra profesora" minlength="7" maxlength="7"><br><br>
+	    	<input type="text" name="odeljenje" placeholder="Broj odeljenja: 11, 36, 55..." minlength="2" maxlength="2"><br><br>
+	    	<button type="submit">Potvrdi</button>
+
+	    </form>
+
+--------------------------------------------------------------------------------------------------------------------------
+
+profesori:
+
+Upis ocene:
+
+<form action="/upisatiocenu" method="post"  autocomplete="off">
+		    		<h3>Upis ocene</h3>
+		    		<input type="text" name="ime" placeholder="Prezime i ime ucenika" required=""><br><br>
+					Ocena: <select name="ocena">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select><br><br>
+					<textarea name="beleskaOcene" placeholder="Beleska za ocenu" required></textarea><br><br>
+					<button type="submit">Potvrdi</button>
+
+		    	</form>
+
+-----------
+
+Upis izostanka:
+
+<form action="/upisatiizostanak" method="post" autocomplete="off">
+		    		<h3>Upis izostanaka</h3>
+					<input type="text" name="ime" placeholder="Prezime i ime ucenika" required><br><br>
+					<button type="submit">Potvrdi</button>
+			
+
+
+		    	</form>
+
+--------------
+
+Upis napomena:
+
+<form action="/upisatinapomenu" method="post" autocomplete="off">
+		    		<h3>Upis napomene</h3>
+
+					<input type="text" name="ime" placeholder="Prezime i ime ucenika" required><br><br>
+					<textarea name="zasto" placeholder="Razlog za napomenu" required></textarea><br><br>
+
+					<button type="submit">Potvrdi</button>
+
+
+
+		    	</form>
+
+------------------
+
+Zakazati kontrolni:
+
+<form action="/zakazikontrolni" method="post" autocomplete="off">
+		    		<h3>Zakazati kontrolni</h3>
+
+					<input type="text" name="datum" placeholder="Upisite datum za kontrolni, format: 05.07." minlength="6" maxlength="6" required>
+					<p>**Vazi za ovo odeljenjeu <br> u kojem ste trenutno: {{trenutnoOdeljenje}}</p>
+					
+
+					<button type="submit">Potvrdi</button>
+
+
+
+		    	</form>
+
+
+----------------
+
+Ponistiti kontrolni:
+
+<form action="/ponistavanjekontrolnog" method="post" autocomplete="off">
+		    		<h3>Ponistavanje kontrolnog</h3>
+
+					<input type="text" name="sifraKontrolneVezbe" placeholder="Unesite sifru kontrolnog" minlength="10" maxlength="10" required><br><br>
+					
+
+					<button type="submit">Potvrdi</button>
+
+
+
+		    	</form>
+
+-------------------------------------------------------------------------------------
+
+direktor:
+
+Promena sifre profesora:
+
+<form action="/promenasifre" autocomplete="off" method="post">
+					<h3>Promena sifre profesora</h3>
+					<input maxlength="7" name="staraSifra" placeholder="Trenutna sifra profesora" required="" type="text"><br>
+					<br>
+					<button type="submit">Potvrdi</button>
+				</form>
+
+-----------------
+
+Ispis profesora:
+
+<form action="/ispisprofesora" autocomplete="off" method="post">
+					<h3>Ispis profesora</h3>
+					<input maxlength="7" name="profesorSifra" placeholder="Sifra profesora" required="" type="text">
+
+					<p class = potvrditi><input name="sigurno" required="" type="checkbox" style="width:auto;">Sigurno zelite da ovo uradite</p>
+					<button type="submit">Potvrdi</button>
+				</form>
+
+----------------
+
+Prestanak razrednog:
+
+<form action="/stoprazredni" autocomplete="off" method="post">
+					<h3>Prestanak razrednog</h3>
+					<input maxlength="7" name="profesorSifra" placeholder="Sifra profesora" required="" type="text"><br>
+					<br>
+					<button type="submit">Potvrdi</button>
+				</form>
+
+-----------------------
+
+Novi razredni:
+
+<form action="/novrazredni" autocomplete="off" method="post">
+					<h3>Dodela razrednog</h3>
+					<input maxlength="7" name="profesorSifra" placeholder="Sifra profesora" required="" type="text"><br>
+					<br>
+					<input maxlength="2" name="odeljenje" placeholder="Broj odeljenja: 15, 22, 36..." required="" type="text"><br>
+					<br>
+					<button type="submit">Potvrdi</button>
+				</form>
+
+------------------
+
+Novi profesor:
+
+<form action="/dosaoprofesor" autocomplete="off" method="post">
+					<h3>Upis novog profesora</h3>
+					<input name="ime" placeholder="Prezime i ime profesora" required="" type="text"><br>
+					<br>
+					<input name="predmet" placeholder="Predmet profesora" required="" type="text"><br>
+					<br>
+					<button type="submit">Potvrdi</button>
+				</form>
+
+------------------
+
+Upis ocene iz vladanja:
+
+<form action="/upisatiocenu" method="post"  autocomplete="off">
+		    		<h3>Upis ocene iz vladanja</h3>
+		    		<input type="text" name="ime" placeholder="Prezime i ime ucenika" required=""><br><br>
+					Ocena: <select name="ocena">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select><br><br>
+					<textarea name="beleskaOcene" placeholder="Beleska za ocenu" required></textarea><br><br>
+					<button type="submit">Potvrdi</button>
+
+		    	</form>
+
+----------------------
+
+Upis ucenika u odeljenje:
+
+<form action="/upisatiucenika" autocomplete="off" method="post">
+					<h3>Upis novog ucenika</h3>
+					<input name="ime" placeholder="Prezime i ime ucenika" required="" type="text"><br>
+					<br>
+					<input maxlength="2" name="odeljenje" placeholder="Broj odeljenja: 15, 22, 36..." required="" type="text"><br>
+					<br>
+					<button type="submit">Potvrdi</button>
+				</form>
+
+-------------------
+
+Novo odeljenje:
+
+<form action="/doslonovoodeljenje" autocomplete="off" method="post">
+					<h3>Upis novog odeljenja</h3>
+					<input maxlength="2" name="odeljenje" placeholder="Broj odeljenja: 15,22,33..." required="" type="text"><br>
+					<br>
+
+					<textarea name="spisakPredmeta" placeholder="Predmet1, Predmet2, ... , Predmetn" required=""></textarea><br>
+					<br>
+
+					<textarea name="spisakUcenika" placeholder="Prezime i ime 1, Prezime i ime 2, ... , Prezime i ime n" required=""></textarea><br>
+					<br>
+					<input type="submit" value="Potvrdi">
+				</form>
+
+------------------
+
+Racunati prosek:
+
+<form action="/izracunajprossek" autocomplete="off" method="post">
+					<h3>Racunajte prosek</h3>
+
+
+					<p>**Brise sve ostale ocene i upisuje prosecnu na njihovo mesto</p>
+
+
+					<p>Vazi za odeljenje sa kojim ste se prijavili kao direktor: {{kojeOdeljenje}}</p>
+					<input name="sigurno" required="" type="checkbox" style="width:auto;"> POTVRDITE<br>
+					<br>
+					<input type="submit" value="Potvrdi">
+				</form>
+
+---------------
+
+Obrisati odeljenje:
+
+<form action="/odeodeljenje" autocomplete="off" method="post">
+					<h3>Brisanje odeljenja</h3>
+
+
+					<p>**Vazi za odeljenje sa kojim ste se prijavili kao direktor: {{kojeOdeljenje}}</p>
+					<input name="sigurno" required="" type="checkbox" style="width:auto;"> POTVRDITE<br>
+					<br>
+					<input type="submit" value="Potvrdi">
+				</form>
+
+--------------------------------------------------
+
+razredni:
+
+Pravdanje dana:
+
+<form action="/pravdanjedana" autocomplete="off" method="post">
+	<h3>Pravdanje jednog dana</h3>
+	<input maxlength="7" minlength="7" name="sifraUcenika" placeholder="Sifra ucenika" required type="text"><br>
+					<br>
+	<input maxlength="6" minlength="6" name="datum" placeholder="Datum, unesite u formatu: 25.04." required type="text"><br>
+					<br>
+					<button type="submit">Potvrdi</button>
+
+</form>
+
+-------------------------
+
+Pravdanje jednog izostanka:
+
+<form action="/pravdanjejedan" autocomplete="off" method="post">
+	<h3>Pravdanje jednog izostanka</h3>
+	
+	<input maxlength="10" minlength="10" name="sifraIzostanka" placeholder="Sifra izostanka" required type="text"><br>
+					<br>
+					<button type="submit">Potvrdi</button>
+</form>
+
+--------------------
+
+
+
+---
+--
+-
+-
+-
+
+
+<form action="/upisatiocenu" method="post"  autocomplete="off">
+		    		<h3 class="title is-4">Upis ocene</h3>
+		    		<input type="text" class="input" name="ime" placeholder="Prezime i ime ucenika" required=""><br><br>
+					Ocena: <select name="ocena">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select><br><br>
+					<textarea class="textarea" name="beleskaOcene" placeholder="Beleska za ocenu" required></textarea class="textarea"><br><br>
+					<button type="submit" class="button">Potvrdi</button>
+		    	</form>
+		    	<hr>
+		    	<form action="/upisatiizostanak" method="post" autocomplete="off">
+		    		<h3 class="title is-4">Upis izostanaka</h3>
+					<input type="text" class="input" name="ime" placeholder="Prezime i ime ucenika" required><br><br>
+					<button type="submit" class="button">Potvrdi</button>
+		    	</form>
+		    	<hr>
+		    	<form action="/upisatinapomenu" method="post" autocomplete="off">
+		    		<h3 class="title is-4">Upis napomene</h3>
+
+					<input type="text" class="input" name="ime" placeholder="Prezime i ime ucenika" required><br><br>
+					<textarea class="textarea" name="zasto" placeholder="Razlog za napomenu" required></textarea class="textarea"><br><br>
+
+					<button type="submit" class="button">Potvrdi</button>
+		    	</form>
+		    	<hr>
+		    	<form action="/zakazikontrolni" method="post" autocomplete="off">
+		    		<h3 class="title is-4">Zakazati kontrolni</h3>
+
+					<input type="text" class="input" name="datum" placeholder="Upisite datum za kontrolni, format: 05.07." minlength="6" maxlength="6" required>
+					<p>**Vazi za ovo odeljenjeu <br> u kojem ste trenutno: {{trenutnoOdeljenje}}</p>
+					
+
+					<button type="submit" class="button">Potvrdi</button>
+		    	</form>
+				<hr>
+				<form action="/ponistavanjekontrolnog" method="post" autocomplete="off">
+		    		<h3 class="title is-4">Ponistavanje kontrolnog</h3>
+
+					<input type="text" class="input" name="sifraKontrolneVezbe" placeholder="Unesite sifru kontrolnog" minlength="10" maxlength="10" required><br><br>
+					
+
+					<button type="submit" class="button">Potvrdi</button>
+		    	</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

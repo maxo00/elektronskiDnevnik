@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Elektronski dnevnik, direktor</title>
+	<link rel="stylesheet" type="text/css" href="../static/direktor.css">
+	
+</head>
+<body>
+
+<a href="/">
+<div id="odjava">
+	Odjavite se
+</div>
+</a>
+
+<div class="stranica">	
+
+<div class="vrh">
+	<h1 id="glavniNaslov">Elektornski dnevnik, direktor skole</h1>
+</div>
+
+<table>
+	<tr><th>Ime profesora</th><th>Predmet profesora</th><th>Sifra profesora</th><th>Razredni odeljenju</th></tr>
+	%for ime, predmet, sifra, razredni in podaciProfesora:
+	%if ime == "":
+	%break
+	%end
+	<tr>
+		<td>{{ime}}</td><td>{{sifra}}</td><td>{{predmet}}</td><td>{{razredni}}</td>
+	</tr>
+	%end
+</table>
+
+<p><a href="#">Ako zelite da uredite podesavanja odeljenja kliknite ovde.</a></p>
+
+
+</div>
+
+
+
+
+</body>
+</html>

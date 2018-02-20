@@ -1,0 +1,112 @@
+#odjava {
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	width: auto;
+	color: black;
+	background-color: grey;
+	border: 1px solid grey;
+	border-radius: 5px;
+	padding: 5px;
+	font-size: 22px;
+}
+
+#odjava:hover {
+	background-color: white;
+}
+
+body,
+html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+.vrh {
+	width: 100%;
+	height: 50px;
+	background: linear-gradient(#f2f2f2, #bfbfbf);
+}
+
+#glavniNaslov {
+	text-align: center;
+	margin: auto;
+	color: #333333;
+	font-size: 40px;
+	font-family: 'Slabo 27px', serif;
+	font-style: italic;
+}
+
+#tabela {
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+table {
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+table,
+tr,
+th,
+td {
+	border-collapse: collapse;
+	border: 1px solid black;
+	font-size: 22px;
+}
+
+td,
+th {
+	padding: 5px;
+}
+
+tr:hover {
+	background-color: #e6e6e6;
+}
+
+.gornjeForme {
+	display: inline-block;
+	padding: 10px;
+}
+
+.gornjeForme:hover {
+	border-color: #9ecaed;
+	box-shadow: 0 0 10px #9ecaed;
+}
+
+.formeDole {
+	display: inline-block;
+	padding: 10px;
+}
+
+.formeDole:hover {
+	border-color: #9ecaed;
+	box-shadow: 0 0 10px #9ecaed;
+}
+
+.formeOdeljenja {
+	display: inline-block;
+	padding: 10px;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.formeOdeljenja:hover {
+	border-color: #9ecaed;
+	box-shadow: 0 0 10px #9ecaed;
+}
+
+textarea {
+	resize: vertical;
+	width: 250px;
+	min-height: 60px;
+}
+
+
+input{
+	width: 250px;
+}

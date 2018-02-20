@@ -1,0 +1,56 @@
+Projekat: Elektronski dnevnik
+Ucesnik: Marko Maksimovic (17)
+
+Upustvo elektronskog dnevnika:
+
+Projekat je radjen u Python-u verzija 3.6.3 (64 bit verzija Python-a)
+Projekat bi takodje radio i na 32 bitnoj i 64 bitnoj verziji bilo koje Python 3+ verzije.
+Mozda bi bilo moguce raditi i u Python 2.7.x verziji Python-a
+ali moguce bi bile mozda neke smetnje u vezi pojedinih funkcija, zato najbolje koristiti na nekoj 3+ verziji Python-a. 
+Od paketa pored standaradnih koji su vec instalirani sa Python-om dodat je Bottle (web framework) i ako je pri instalaciji Pythona aktivirano Add to PATH
+instalacija Bottle paketa je ovako: "pip install bottle" ili ako je mozda vise verzija Python-a instalirano "pip3 install bottle".
+
+Preporucio bih vam da pogledate prvo popunjeni tako sto cete se prijaaviti kao direktor (sifra: "znakovi") posto ce moci mnogo vise stvari da se vidi,
+pa kada vidite kako dnevnik radi da pokrenete praznu verziju da vidite kako bi izgledalo to prvo pokretanje bez unetih profesora i odeljenja.
+
+Imate prilozen popunjen i ne popunjen dnevnik, u poopunjenom su vec ubacena neka odeljenja i profesori, dok u ne popunjenom nisu.
+Za pregled baza zarad uzimanja sifri imate fajl koji se zove "dnenvik.db" u kojem se nalaze podaci o dnevniku(odeljenja, ucenici, profesori, izostanci...).
+Pokretanje vec popunjenog dnevnika radite pokretanjem Python fajla "sajtBackend.py" iz nekog IDE-a ili iz terminala: "python sajtBackend.py".
+Pokretanjem fajla mocicete da u pretrazivacu uneste adresu 127.0.0.1:8000 (localhost na portu 8000) preko kojeg mozete pristupiti sajtu dnevnika.
+Dalja upustva su na sajtu u kojem ce moci da se unose informacije, pri cemu posto nisam bio siguran ko bi u skoli odlucivao o ocenama iz vladanja ucenika,
+stavio sam direktora skole da ima tu privilegiju.
+Pri prijavi profesora razlicite rezultate pretrage ce imati direktori i profesori i profesori koji jesu ii nisu staresine).
+
+
+Za ne popunjen dnevnik pri prvom koriscenju pokrenuti "prvoPokretanje.py" koje ce stvoriti bazu i kao direktora uneti profesora
+koji ima sifru "1234567", a ostale informacije ce moci da se vide kada se direktor prijavi.
+Mozete uneti bilo koji broj za odeljenje posto to ne utice na direktore vec samo na profesore.
+Kada se prijavite mozete uneti informacije za direktora (predmet Vladanje *bitno*), ali sve sifre ce biti date nasumicno (7 karaktera) i bice vam prikazane
+informacije koje ste uneli. Kasnije mozete obrisati automatski unetog direktora na sajtu.
+Takodje dodati i profesore (profesor nije u stanju da pristupi odeljenju kojem ne predaje).
+Ostalo je samo nastavak kao za vec popunjen dnevnik. 
+
+
+
+
+Neke informacije o popunjenom dnevniku:
+Profesori:
+Ime profesora		Sifra profesora		Predmet profesora		Razredni odeljenju
+Slobodanovic Slobodan	J7n0pst			Vladanje			ne
+Markovic Marko		XydEUr6			Engleski			JedanDva
+Todorovic Todor		kYErcsN			Srpski				DvaJedan
+Anic Ana		V0ej92n			Istorija			JedanJedan
+Mirkovic Mirko		nN1KB8k			Fizicko				ne
+Petrovic Petar		inSqbrG			Matematika			DvaDva
+Milosevic Milos		NpVnMmh			Geografija			ne
+Jelenic Jelena		LBOg6Se			Fizika				ne
+Gavrilovic Gavrilo	vZG3VAf			Muzicko				ne
+Zoric Zorica		bNADd3s			Informatika			ne
+Mladenovic Mladen	NwsxSMm			Elektronika			ne
+Bojanic Bojana		dnZVAT7			Likovno				ne
+Filipovic Filip		HetXSPV			Sociologija			ne
+
+Odeljenja koja postoje:
+11, 12, 21, 22
+Sve ostale podatci se mogu videti kada se pristupi sajtu.
+Sva odeljenja imaju ista imena ucenika, ali nece svi imati iste predmete (ni iste ocene naravno).

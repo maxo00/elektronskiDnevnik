@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+
+body {
+    font-family: Arial;
+    color: white;
+}
+
+.deljenje {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    top: 0;
+}
+
+.levaStrana {
+    left: 0;
+    background-image: url("../static/slikazaUcenike.jpg");
+    background-size: cover;
+}
+
+.desnaStrana {
+    right: 0;
+    background-image: url("../static/slikaZaProfesore.jpg");
+    background-size: cover;
+}
+
+.sredinaDela {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+form{
+    height: auto;
+    width: auto;
+    padding: 50px;
+    border-radius: 100px;
+}
+h2{
+    color: #333333;
+    font-size: 40px;
+    font-family: 'Slabo 27px', serif;
+    font-style: italic;
+}
+h1{
+    color: black;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pregled dnevnika</title>
+	<link rel="stylesheet" type="text/css" href="../static/profesor.css">
+</head>
+<body>
+<div class="stranica">
+		  <div class="vrh">
+		  	<h1 id="glavniNaslov">Elektronski dnevnik, profesor</h1>
+
+		  </div>
+
+		  <div class="zaCas">
+		    <div id="forme">
+		    	<form action="/upisatiocenu" method="post"  autocomplete="off">
+		    		<h3>Upis ocene</h3>
+		    		<input type="text" name="ime" placeholder="Prezime i ime ucenika" required=""><br><br>
+					Ocena: <select name="ocena">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select><br><br>
+					<textarea name="beleskaOcene" placeholder="Beleska za ocenu" required></textarea><br><br>
+					<button type="submit">Potvrdi</button>
+
+		    	</form>
+		    	<hr>
+		    	<form action="/upisatiizostanak" method="post" autocomplete="off">
+		    		<h3>Upis izostanaka</h3>
+					<input type="text" name="ime" placeholder="Prezime i ime ucenika" required><br><br>
+					<button type="submit">Potvrdi</button>
+			
+
+
+		    	</form>
+		    	<hr>
+		    	<form action="/upisatinapomenu" method="post" autocomplete="off">
+		    		<h3>Upis napomene</h3>
+
+					<input type="text" name="ime" placeholder="Prezime i ime ucenika" required><br><br>
+					<textarea name="zasto" placeholder="Razlog za napomenu"></textarea><br><br>
+
+					<button type="submit">Potvrdi</button>
+
+
+
+		    	</form>
+		    	<hr>
+		    	<form action="/zakazikontrolni" method="post" autocomplete="off">
+		    		<h3>Zakazati kontrolni</h3>
+
+					<input type="text" name="datum" placeholder="Upisite datum za kontrolni, format: 05.07." minlength="6" maxlength="6" required>
+					<p>**Vazi za ovo odeljenjeu <br> u kojem ste trenutno: {{trenutnoOdeljenje}}</p>
+					
+
+					<button type="submit">Potvrdi</button>
+
+
+
+		    	</form>
+					<hr>
+					<form action="/ponistavanjekontrolnog" method="post" autocomplete="off">
+		    		<h3>Ponistavanje kontrolnog</h3>
+
+					<input type="text" name="datum" placeholder="Unesite sifru kontrolnog" minlength="10" maxlength="10" required><br><br>
+					
+
+					<button type="submit">Potvrdi</button>
+
+
+
+		    	</form>
+		    </div>
+
+		</div>
+
+
+		  <div class="tabelaZaCas">
+		<table>
+					
+				<tr><th>Prezime i ime ucenika</th><th>Ocene iz predmeta: {{predmet}}</th></tr>
+
+
+
+				
+
+				</table>
+		 	
+		</div>
+
+
+  <div class="zakazaniKontrolniProfesor">
+
+	</div>
+
+
+
+	
+  	
+
+    </div>
+</body>
+</html>
